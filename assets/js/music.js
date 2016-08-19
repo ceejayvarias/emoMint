@@ -17,6 +17,5 @@ $.ajax({url: queryURL, method: 'GET'})
   		$('#music').prepend(newDiv);
   	};
 });
-
-
-}; // closes document ready
+}; // closes spotify
+}); // closes document ready
