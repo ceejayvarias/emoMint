@@ -21,7 +21,7 @@ function apiCall() {
 	});
 }
 
-$('button').click(function{
+$('#movies').click(function{
 	apiCall()
 });
 
