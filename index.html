@@ -1,89 +1,127 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="musicJS" href="assets/js/music.js">
+  <link rel="musicJS" href="assets/js/movie.js">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<!-- Style for the background -->
+  <style>
 
-	<meta charset="UTF-8">
-	<title> emoMotive!</title>
+  body {
+      position: relative;
+  }
+  #section1 {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
+  #section2 {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
+  #section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
+  #section41 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
+  #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
 
-<!-- Bootstrap -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-<link rel="musicJS" href="assets/music.js">
+  </style>
 
 </head>
-<body>
-<!-- container -->
-<div id="container">
-	
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<!-- Header -->
-<div id="header">
-	<div id="login">
-		
-	</div>
-	
+<!-- Nav Bar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">emoMint</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#section1">Snap Your Emotion</a></li>
+          <li><a href="#section2"> Mint of your day</a></li>
+          <li><a href="#section3">Mint Log</a></li>
+
+          <!-- Log In/Sign up -->
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login/Sign up <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="username">Username <input type="text"> Password <input type="text"> </a></li>
+              <li><a href="#section42">New Userq</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Photo booth -->
+<div id="photoBooth" class="container-fluid">
+  <h1>Snap your emotion</h1>
+  <p>Take your Picture!</p>
+  <p>Capture your mood</p>
+    <div>
+<button id ="snap" type="submit" class="btn btn-default">Snap!</button> 
+  </div>
 </div>
 
+<!-- Mint of the day -->
+<div id="mintOfTheDay" class="container-fluid">
+  <h1>Mint of the day</h1>
 
+  <div id="photo">
+  </div>
+  
+  <div>
+<button id ="movies" type="submit" class="btn btn-default">Movies</button> 
+  </div>
 
-<!-- photo booth -->
-<div>
-
-	<div id="photo">
-	</div>
-	
-	<div>
-	<button id="movies"> movies </button> 
-	</div>
-
-	<div>
-	<button id="music"> music </button> 
-	</div>
-
+  <div>
+ <button id ="music" type="submit" class="btn btn-default">Music</button>
+  </div>
 
 </div>
 
-<!-- log -->
-<div id="logPage">
-	<div class="log" id="logIndex">
-	
-	</div>
-</div>
-
-
-
-<!-- left Submit -->
-<div>
- <!-- need to figure out buttons -->
- 
- <!-- take snap -->
- <!-- retake snap -->
+<!-- Mint Log -->
+<div id="mintLog" class="container-fluid">
+  <h1> Mint Log </h1>
 
 </div>
 
+<!-- SignUp Page -->
+<!-- <div id="section41" class="container-fluid">
+  
+</div> -->
+<div id="section42" class="container-fluid">
+ <div class="container">
+  <h2> Sign Up</h2>
+  <form role="form">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+      <label for="pwd">Re-enter Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Re-enter password">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+</div>
+</div>
 
-
-
-</div> <!-- container end -->
-
-
-
-
-<!-- Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
 
-<!-- Add Firebase CDN -->
-
 </body>
-
-
-
-
-
-
-
-
-
 </html>
+
