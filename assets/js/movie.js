@@ -1,8 +1,9 @@
 
 
-<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
-<script type="text/javascript">
-var randomMovieArray = ['Love Actually', 'When Harry Met Sally', 'Stepbrothers', 'The Hangover', 'Bridesmaids', 'Just Friends', 'Airplane', 'Groundhog day', 'Old School', 'Tropic Thunder', 'Frozen'];
+
+
+var randomMovieArray = ['Love Actually', 'When Harry Met Sally', 'Stepbrothers', 'The Hangover', 'Bridesmaids', 'Just Friends', 'Airplane', 'Groundhog day', 'Old School', 'Tropic Thunder'];
+
 
 function apiCall() {
 	var randomNumber = Math.floor((Math.random() * randomMovieArray.length + 1));
