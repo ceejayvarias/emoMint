@@ -16,7 +16,7 @@ $.ajax({url: queryURL, method: 'GET'})
 
   		$('#music').prepend(newDiv);
   	};
-};
+});
 
 
-}); // closes document ready
+}; // closes document ready
