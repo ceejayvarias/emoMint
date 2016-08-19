@@ -1,5 +1,9 @@
 
+
+
+
 var randomMovieArray = ['Love Actually', 'When Harry Met Sally', 'Stepbrothers', 'The Hangover', 'Bridesmaids', 'Just Friends', 'Airplane', 'Groundhog day', 'Old School', 'Tropic Thunder'];
+
 
 function apiCall() {
 	var randomNumber = Math.floor((Math.random() * randomMovieArray.length + 1));
@@ -14,7 +18,6 @@ function apiCall() {
 	});
 }
 
-$('#movies').click(function{
+$('#movies').click(function(){
 	apiCall()
 });
-
