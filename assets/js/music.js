@@ -10,14 +10,11 @@
 
 database.ref().on("child_added", function(childSnapshot, prevChildKey){
 
-  var smile = childSnapshot.val().emotion;
-
-
-var queryURL = "https://api.spotify.com/v1/search?query=" + /*keyword*/ + "&offset=0&limit=20&type=album";
+var emotion = childSnapshot.val().emotion;
+var queryURL = "https://api.spotify.com/v1/search?query=" + emotion + "&offset=0&limit=20&type=album";
 
 $.ajax({url: queryURL, method: 'GET'})
   .done(function(response){
-    //NEED VARIABLE FOR DATA SEARCH KEY FROM FIREBASE
     var result = response.albums.items;
 
     for(var i = 0; i < result.length; i++) {
