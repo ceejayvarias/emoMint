@@ -3,15 +3,15 @@
 //                      { apiURL: 'http://apicn.faceplusplus.com/v2' });
 
  // Initialize Firebase
- var config = {
-   apiKey: "AIzaSyDAW-OXo25GXGm5ZAa8DDTHrckGc_QF0Jw",
-   authDomain: "emomint-4519e.firebaseapp.com",
-   databaseURL: "https://emomint-4519e.firebaseio.com",
-   storageBucket: "emomint-4519e.appspot.com",
- };
+  var config = {
+    apiKey: "AIzaSyDAW-OXo25GXGm5ZAa8DDTHrckGc_QF0Jw",
+    authDomain: "emomint-4519e.firebaseapp.com",
+    databaseURL: "https://emomint-4519e.firebaseio.com",
+    storageBucket: "emomint-4519e.appspot.com",
+  };
  firebase.initializeApp(config);
 
- var database = firebase.database();
+var database = firebase.database();
 
 //detects the personPhoto URL and returns data
 var api = new FacePP('0ef14fa726ce34d820c5a44e57fef470', '4Y9YXOMSDvqu1Ompn9NSpNwWQFHs1hYD');
@@ -31,7 +31,7 @@ var onUpload = function(err, metadata) {
 	});
 
 //face ++ reads data
-	api.request('detection/detect', {
+api.request('detection/detect', {
 		url: metadata.url
 	}, function(err, result) {
 		console.log(err);
@@ -56,14 +56,32 @@ $('#up-form').submit(function(e) {
   });
 });
 
+
 var arr, str, int; //arbitrary
 
 function storeFace (arr) {
+	var emotion;
+	if (arr.smiling.value > 75) {
+		emotion = 'happy';
+	}
+	else if(arr.smiling.value > 50){
+		emotion = 'content';
+	}
+	else if(arr.smiling.value > 25){
+		emotion = 'sad';
+	}
+	else {
+		emotion = 'angry';
+	}
 	database.ref().push({
-		smile: arr.smiling.value,
+		emotion: emotion,
 		date: $.now()
 	})
+	console.log(emotion);
 	console.log(arr.smiling.value);
 }
+
+
+
 	
 
