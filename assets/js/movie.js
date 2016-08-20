@@ -9,6 +9,12 @@
  };
  firebase.initializeApp(config);
 
+var database = firebase.database();
+
+database.ref().on('child_added', function(snap){
+	snap.val().emotion);
+});
+
 var randomMovieArray = ['Love Actually', 'When Harry Met Sally', 'Swingers', 'The Hangover', 'Bridesmaids', 'Just Friends', 'Airplane', 'Groundhog day', 'Old School', 'Tropic Thunder'];
 
 
