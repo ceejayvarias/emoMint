@@ -58,27 +58,38 @@
 
 <!-- Photo booth -->
 <div id="photoBooth" class="container-fluid">
-	<h1>Snap your emotion</h1>
-	<p>Take your Picture!</p>
-	<p>Capture your mood</p>
-	<div class="row">
-		<div class="camera col-lg-4">
-			<video id="video">Video stream not available.</video>
-			<button id="startbutton">Take photo</button>
-		</div>
-		<canvas id="canvas" class="col-lg-4">
-		</canvas>
-		<div class="output col-lg-4">
-			<img id="photo" alt="The screen capture will appear in this box.">
-			<div id='personPhoto'></div>
-		</div>
-	</div>
-	<form id="up-form">
-		<input type="file" multiple />
-		<button id ="snap" type="submit" class="btn btn-default">Snap!</button> 
-	</form>
-	<div id="detection">
-	</div>
+	
+
+
+
+
+
+
+  <h1>Snap your emotion</h1>
+
+ <!-- Image box -->
+       <img id="photo" alt="The screen capture will appear in this box."> 
+       <div id='personPhoto'></div>
+     
+      <!-- choose yours picture from personal file -->
+    <form id="up-form">
+      <input type="file" multiple />
+      <button id ="snap" type="submit" class="btn btn-default">Choose your picture</button> 
+   </form>
+
+<!-- Capture picture with webcam  -->
+  <p>Capture your mood</p>
+
+  <div class="row">
+    <div class="camera col-lg-4">
+      <video id="video">Video stream not available.</video>
+      <button id="startbutton" class="btn btn-default">Take photo</button>
+       <canvas id="canvas" class="col-lg-4"></canvas>
+    </div>
+  </div>  
+
+	<!-- detecting the smile % -->
+    <div id="detection"></div>
   </div>
 </div>
 
