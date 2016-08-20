@@ -2,6 +2,17 @@
 //                      '4Y9YXOMSDvqu1Ompn9NSpNwWQFHs1hYD',
 //                      { apiURL: 'http://apicn.faceplusplus.com/v2' });
 
+ // Initialize Firebase
+ var config = {
+   apiKey: "AIzaSyDAW-OXo25GXGm5ZAa8DDTHrckGc_QF0Jw",
+   authDomain: "emomint-4519e.firebaseapp.com",
+   databaseURL: "https://emomint-4519e.firebaseio.com",
+   storageBucket: "emomint-4519e.appspot.com",
+ };
+ firebase.initializeApp(config);
+
+ var database = firebase.database();
+
 //detects the personPhoto URL and returns data
 var api = new FacePP('0ef14fa726ce34d820c5a44e57fef470', '4Y9YXOMSDvqu1Ompn9NSpNwWQFHs1hYD');
 var imageURL; //URL stored into varaible
@@ -48,6 +59,10 @@ $('#up-form').submit(function(e) {
 var arr, str, int; //arbitrary
 
 function storeFace (arr) {
+	database.ref().push({
+		smile: arr.smiling.value,
+		date: $.now()
+	})
 	console.log(arr.smiling.value);
 }
 	
