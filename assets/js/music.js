@@ -11,6 +11,7 @@
 database.ref().on("child_added", function(childSnapshot, prevChildKey){
 
 var emotion = childSnapshot.val().emotion;
+console.log('andrew-emotion is: ' + emotion);
 var queryURL = "https://api.spotify.com/v1/search?query=" + emotion + "&offset=0&limit=20&type=album";
 
 $.ajax({url: queryURL, method: 'GET'})
@@ -27,8 +28,8 @@ $.ajax({url: queryURL, method: 'GET'})
     };
 });
 
-}); // closes document ready
-}
+}); // closes database.ref() 
+
 
 
 
