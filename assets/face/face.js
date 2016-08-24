@@ -77,3 +77,4 @@ function storeFace (arr) {
 	console.log(arr.smiling.value);
 }
 
+//hello
