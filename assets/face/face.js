@@ -15,7 +15,7 @@ var imageURL; //URL stored into varaible
 var ospry = new Ospry('pk-test-r5dsrmo3nign9vbx8i8nmoyz');
 
 var onUpload = function(err, metadata) {
-	imageURL = "'" + metadata.url + "'";
+	imageURL = metadata.url;
 	ospry.get({
 		url: metadata.url,
 		maxHeight: 200,
@@ -72,7 +72,7 @@ function storeFace (arr) {
 	database.ref().push({
 		emotion: emotion,
 		date: $.now(),
-		check: 'bad'
+		image: imageURL
 	})
 	console.log(emotion);
 	console.log(arr.smiling.value);
