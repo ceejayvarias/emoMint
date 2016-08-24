@@ -1,0 +1,80 @@
+body {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    clear: both;
+  }
+
+  /*.container{
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    clear: both;  
+  }*/
+
+  #myNavbar{
+    position: relative;
+    left:350px;
+   }
+
+  .navbar{
+    max-width: 960px;
+    margin: 0 auto;
+    clear: both; 
+
+  }
+  .dropdown-menu{
+    max-width: 960px;
+    margin: 0 auto;
+    clear: both; 
+    
+  }
+
+  #photoBooth {
+    padding-top:50px;
+    height:1000px;
+    color: #fff; 
+    background-color: #1E88E5;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    clear: both;  }
+
+  #mintOfTheDay {
+    padding-top:50px;
+    height:1000px;
+    color: #fff; 
+    background-color: #673ab7;}
+
+  #mintLog {
+    padding-top:50px;
+    height:1000px;
+    color: #fff; 
+    background-color: #ff9800;}
+
+  #signUp{
+    padding-top:50px;
+    height:1000px;
+    color: #fff; 
+    background-color: #00bcd4;}
+
+  #signUp {
+    padding-top:50px;
+    height:1000px;
+    color: #fff; 
+    background-color: #009688;
+    text-align: center;
+  }
+
+  input{
+    max-width: 900px;
+  }
+
+  .checkbox label, .radio label {
+    min-height: 20px;
+    padding-left: 40px;
+  }
+
+  
