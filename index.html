@@ -4,9 +4,11 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/css/reset.css">
+   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
   <link rel="stylesheet" href="assets/css/style.css">
+
   </head>
 
 
@@ -33,9 +35,9 @@
           <!-- Log In/Sign up -->
           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login/Sign up <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="username">Username <input type="text"> Password <input type="text"> </a></li>
-              
-              <div class="checkbox" id="checkbox1">
+              <li><a>Username <input type="text"> Password <input type="text"> </a></li>
+
+              <div class="checkbox">
               <label><input type="checkbox"> Remember me</label>
               </div>
 
@@ -57,11 +59,11 @@
  <!-- Image box -->
 <!--        <img id="photo" alt="The screen capture will appear in this box.">  -->
        <div id='personPhoto'></div>
-     
+
       <!-- choose yours picture from personal file -->
     <form id="up-form">
       <input type="file" multiple />
-      <button id ="snap" type="submit" class="btn btn-default">Choose your picture</button> 
+      <button id ="snap" type="submit" class="btn btn-default">Choose your picture</button>
    </form>
 
 <!-- Capture picture with webcam  -->
@@ -76,7 +78,7 @@
   </div>   -->
 
 	<!-- detecting the smile % -->
- 
+
   </div>
 </div>
 
@@ -84,18 +86,29 @@
 <div id="mintOfTheDay" class="container-fluid">
   <h1>Mint of the day</h1>
 
-  <div id="poster">
+
+  <div class="recommendedMusic container">
+  <div class ="row">
+
+  <div class="col-sm-6">
+      <h2>Movie</h2>
+       <div id="poster">
   </div>
-  
+
   <div>
   <img src="">
-<button id ="movies" type="submit" class="btn btn-default">Movies</button> 
+<div id ="movies" type="submit" class="btn btn-default">Movies</div>
   </div>
 
-  <div>
- <button id ="music" type="submit" class="btn btn-default">Music</button>
+    </div>
+
+    <div class="col-sm-6 ">
+  <h2>Music</h2>
+ <div id ="music" type="submit">Music</div>
+  </div>
   </div>
 
+</div>
 </div>
 
 <!-- Mint Log -->
@@ -120,7 +133,7 @@
 
 <!-- SignUp Page -->
 <!-- <div id="section41" class="container-fluid">
-  
+
 </div> -->
 <div id="signUp" class="container-fluid">
  <div class="container">
@@ -155,6 +168,8 @@
 <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
 
 <script src="https://code.ospry.io/v1/ospry.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script type="text/javascript" src="assets/face/facepp-sdk.min.js"></script>
 <script type="text/javascript" src="assets/face/face.js"></script>
 
@@ -165,21 +180,20 @@
 <script type="text/javascript" src="assets/js/firebase.js"></script>
 
 <!-- FrontEnd functions -->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 
 var scrollPosition = [
   self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
   self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
 ];
-var html = jQuery('html'); 
+var html = jQuery('html');
 html.data('scroll-position', scrollPosition);
 html.data('previous-overflow', html.css('overflow'));
 html.css('overflow', 'hidden');
 window.scrollTo(scrollPosition[0], scrollPosition[1]);
 
-</script>
+</script> -->
 
 
 </body>
 </html>
-
