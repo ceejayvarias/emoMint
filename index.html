@@ -4,23 +4,10 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-
-<!-- Style for the background -->
-  <style>
-
-  body {
-      position: relative;
-  }
-  #photoBooth {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
-  #mintOfTheDay {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
-  #mintLog {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
-  #signUp{padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
-  #signUp {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
-
-  </style>
-</head>
+  <link rel="stylesheet" href="assets/css/style.css">
+  </head>
 
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -47,6 +34,11 @@
           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login/Sign up <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="username">Username <input type="text"> Password <input type="text"> </a></li>
+              
+              <div class="checkbox" id="checkbox1">
+              <label><input type="checkbox"> Remember me</label>
+              </div>
+
               <li id="4"><a href="#signUp">New User</a></li>
             </ul>
           </li>
