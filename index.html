@@ -86,18 +86,29 @@
 <div id="mintOfTheDay" class="container-fluid">
   <h1>Mint of the day</h1>
 
-  <div id="poster">
+
+  <div class="recommendedMusic container">
+  <div class ="row">
+
+  <div class="col-sm-6">
+      <h2>Movie</h2>
+       <div id="poster">
   </div>
   
   <div>
   <img src="">
-<button id ="movies" type="submit" class="btn btn-default">Movies</button> 
+<div id ="movies" type="submit" class="btn btn-default">Movies</div> 
+  </div>
+      
+    </div>
+
+    <div class="col-sm-6 ">
+  <h2>Music</h2>
+ <div id ="music" type="submit">Music</div>
+  </div>
   </div>
 
-  <div>
- <button id ="music" type="submit" class="btn btn-default">Music</button>
-  </div>
-
+</div>
 </div>
 
 <!-- Mint Log -->
@@ -151,7 +162,7 @@
 <script type="text/javascript" src ="assets/js/movie.js"></script>
 
 <!-- FrontEnd functions -->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 
 var scrollPosition = [
   self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
@@ -163,7 +174,7 @@ html.data('previous-overflow', html.css('overflow'));
 html.css('overflow', 'hidden');
 window.scrollTo(scrollPosition[0], scrollPosition[1]);
 
-</script>
+</script> -->
 
 
 </body>

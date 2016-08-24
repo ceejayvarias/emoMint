@@ -34,7 +34,7 @@ body {
 
   #photoBooth {
     padding-top:50px;
-    height:1000px;
+    height: 950px;
     color: #fff; 
     background-color: #1E88E5;
     width: 100%;
@@ -76,6 +76,15 @@ body {
     min-height: 20px;
     padding-left: 40px;
   }
+div.recommendedMusic {
+    width: 500px;
+    height: 690px;
+    overflow: hidden;
+}
+
+div .newMusic img {
+  width: 210px;
+}
 
 
   
