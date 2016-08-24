@@ -71,9 +71,9 @@ function storeFace (arr) {
 	}
 	database.ref().push({
 		emotion: emotion,
-		date: $.now()
+		date: $.now(),
+		check: 'bad'
 	})
 	console.log(emotion);
 	console.log(arr.smiling.value);
 }
-
