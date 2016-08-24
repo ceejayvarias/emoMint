@@ -17,7 +17,7 @@
   #mintOfTheDay {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
   #mintLog {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
   #signUp{padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
-  #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
+  #signUp {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
 
   </style>
 </head>
@@ -26,7 +26,7 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
 <!-- Nav Bar -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top" id ="navbar">
   <div class="container-fluid">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -34,20 +34,20 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">emoMint</a>
+     <a id="0" class="navbar-brand"  href="#">emoMint</a>
     </div>
     <div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li><a href="#photoBooth ">Snap Your Emotion</a></li>
-          <li><a href="#mintOfTheDay"> Mint of your day</a></li>
-          <li><a href="#mintLog">Mint Log</a></li>
+          <li id="1"><a href="#photoBooth ">Snap Your Emotion</a></li>
+          <li id ="2"><a href="#mintOfTheDay"> Mint of your day</a></li>
+          <li id="3"><a href="#mintLog">Mint Log</a></li>
 
           <!-- Log In/Sign up -->
           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login/Sign up <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="username">Username <input type="text"> Password <input type="text"> </a></li>
-              <li><a href="#section42">New Userq</a></li>
+              <li id="4"><a href="#signUp">New User</a></li>
             </ul>
           </li>
         </ul>
@@ -137,7 +137,15 @@
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+=======
+
+<!-- Front end Display functions -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+>>>>>>> f367c929246f205dbdff11f3563e561d0311b044
 
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
 
@@ -150,6 +158,21 @@
 
 <script type="text/javascript" src ="assets/js/music.js"></script>
 <script type="text/javascript" src ="assets/js/movie.js"></script>
+
+<!-- FrontEnd functions -->
+<script type="text/javascript">
+
+var scrollPosition = [
+  self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+  self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
+];
+var html = jQuery('html'); 
+html.data('scroll-position', scrollPosition);
+html.data('previous-overflow', html.css('overflow'));
+html.css('overflow', 'hidden');
+window.scrollTo(scrollPosition[0], scrollPosition[1]);
+
+</script>
 
 
 </body>
