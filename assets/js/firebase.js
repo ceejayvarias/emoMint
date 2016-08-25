@@ -71,4 +71,5 @@ $(document).on('click', '.log', function(){
 		li.append(i.attr('src', music[j]));
 		$('#cover').append(li);
 	}
+
 })
