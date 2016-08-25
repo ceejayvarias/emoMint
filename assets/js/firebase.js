@@ -2,13 +2,13 @@
 var database = firebase.database();
 
 database.ref().on('child_added', function(snapshot){
-	console.log(snapshot.val().emotion);
+	// console.log(snapshot.val().emotion);
 	var date = snapshot.val().date; //must convert later
 	var emotion = snapshot.val().emotion;
 	var movie = snapshot.val().movie;
 	var music = snapshot.val().albums;
 	var image = snapshot.val().image;
-	console.log(music);
+	// console.log(music);
 
 	// var d = $('<div>');
 	var i = $('<img>');
