@@ -4,6 +4,8 @@ var database = firebase.database();
 database.ref().on('child_added', function(snapshot, prevChildkey){
 	// console.log(snapshot.val().emotion);
 	var date = snapshot.val().date; //must convert later
+	// var convertedDate = moment(date).format("MMM-DD-YYYY hh:mm a")
+	// console.log("time converting: " + convertedDate);
 	var emotion = snapshot.val().emotion;
 	var movie = snapshot.val().movies;
 	var music = snapshot.val().albums;
