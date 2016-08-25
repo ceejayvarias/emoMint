@@ -17,9 +17,9 @@ database.ref().on('child_added', function(snapshot){
 	i.css('width', 50);
 	row.attr('data-date', date);
 	row.attr('data-movie', movie); //fix later
-	row.attr('data-music1', music.album1);
-	row.attr('data-music2', music.album2);
-	row.attr('data-music3', music.album3);
+	// row.attr('data-music1', music.album1);
+	// row.attr('data-music2', music.album2);
+	// row.attr('data-music3', music.album3);
 	row.attr('data-image', image);
 	row.attr('data-emotion', emotion);
 	row.addClass('log');
@@ -43,10 +43,10 @@ $(document).on('click', '.log', function(){
 	i.css('width', 200);
 	i.attr('src', $(this).data('image'));
 	$('#mintOfTheDay').append(i);
-	i.attr('src', $(this).data('music1'));
-	$('#mintOfTheDay').append(i);
-	i.attr('src', $(this).data('music2'));
-	$('#mintOfTheDay').append(i);
-	i.attr('src', $(this).data('music3'));
-	$('#mintOfTheDay').append(i);
+	// i.attr('src', $(this).data('music1'));
+	// $('#mintOfTheDay').append(i);
+	// i.attr('src', $(this).data('music2'));
+	// $('#mintOfTheDay').append(i);
+	// i.attr('src', $(this).data('music3'));
+	// $('#mintOfTheDay').append(i);
 })
