@@ -2,9 +2,8 @@
 
 var database = firebase.database();
 
-database.ref().on('child_added', function(snap){
+database.ref().on('child_changed', function(snap, prevChildKey){
     snap.val().emotion;
-    console.log(snap.val().emotion);
     var id;
     if(snap.val().emotion == 'happy') {
     	id = 35;
@@ -24,7 +23,6 @@ database.ref().on('child_added', function(snap){
         movie1 : "http://image.tmdb.org/t/p/w500" + response.results[0].poster_path,
         movie2 : "http://image.tmdb.org/t/p/w500" + response.results[1].poster_path,
         movie3 : "http://image.tmdb.org/t/p/w500" + response.results[2].poster_path
-
 	}
 
 	snap.child("movies").ref.set(moviePosters);

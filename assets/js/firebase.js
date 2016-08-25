@@ -1,7 +1,7 @@
 // Initialize Firebase
 var database = firebase.database();
 
-database.ref().on('child_added', function(snapshot){
+database.ref().on('child_added', function(snapshot, prevChildkey){
 	// console.log(snapshot.val().emotion);
 	var date = snapshot.val().date; //must convert later
 	var emotion = snapshot.val().emotion;
@@ -45,49 +45,21 @@ $(document).on('click', '.log', function(){
 	$('#selfie').empty();
 	console.log(this);
 	var i = $('<img>');
-	i.css('width', 200);
 	$('#selfie').append(i.attr('src', $(this).data('image')));
 
-	var li1 = $('<li>');
-	var i1 = $('<img>');
-	i1.css('width', 100);
-	li1.append(i1.attr('src', $(this).data('movie1')));
-	$('#poster').append(li1);
+	//set movies
+	for (var j = 1; j < 4; j++) {
+		var li = $('<li>');
+		var i = $('<img>');
+		li.append(i.attr('src', $(this).data('movie' + j)));
+		$('#poster').append(li);
+	}
 
-	var li2 = $('<li>');
-	var i2 = $('<img>');
-	i2.css('width', 100);
-	li2.append(i2.attr('src', $(this).data('movie2')));
-	$('#poster').append(li2);
-
-	var li3 = $('<li>');
-	var i3 = $('<img>');
-	i3.css('width', 100);
-	li3.append(i3.attr('src', $(this).data('movie3')));
-	$('#poster').append(li3);
-
-	var li1 = $('<li>');
-	var i1 = $('<img>');
-	i1.css('width', 100);
-	li1.append(i1.attr('src', $(this).data('music1')));
-	$('#cover').append(li1);
-
-	var li2 = $('<li>');
-	var i2 = $('<img>');
-	i2.css('width', 100);
-	li2.append(i2.attr('src', $(this).data('music2')));
-	$('#cover').append(li2);
-
-	var li3 = $('<li>');
-	var i3 = $('<img>');
-	i3.css('width', 100);
-	li3.append(i3.attr('src', $(this).data('music3')));
-	$('#cover').append(li3);
-
-	// i.attr('src', $(this).data('music1'));
-	// $('#mintOfTheDay').append(i);
-	// i.attr('src', $(this).data('music2'));
-	// $('#mintOfTheDay').append(i);
-	// i.attr('src', $(this).data('music3'));
-	// $('#mintOfTheDay').append(i);
+	//set music
+	for (var j = 1; j < 4; j++) {
+		var li = $('<li>');
+		var i = $('<img>');
+		li.append(i.attr('src', $(this).data('music' + j)));
+		$('#cover').append(li);
+	}
 })
