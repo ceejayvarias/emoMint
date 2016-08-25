@@ -124,6 +124,10 @@ tr:hover {
   background-color: lightblue;
 }
 
+th{
+  text-align: center;
+}
+
 #selfie {
   height: 100%;
   margin: 10px;
@@ -150,4 +154,11 @@ tr:hover {
 
 #personPhoto {
   height: 200px;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-size: 15px;
 }

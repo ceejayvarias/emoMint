@@ -1,7 +1,7 @@
 // Initialize Firebase
 var database = firebase.database();
 
-database.ref().on("child_changed", function(childSnapshot, prevChildKey){
+database.ref().on("child_added", function(childSnapshot, prevChildKey){
 
 var emotion = childSnapshot.val().emotion;
 
@@ -16,11 +16,12 @@ $.ajax({url: queryURL, method: 'GET'})
     var albums = {
       album1 : result[0].images[1].url,
       album2 : result[1].images[1].url,
-      album3 : result[2].images[1].url
-      
+      album3 : result[2].images[1].url,
     }
-      
-    childSnapshot.child("albums").ref.set(albums);
+
+    if (childSnapshot.child("albums").val() == null) {
+      childSnapshot.child("albums").ref.set(albums);
+    }
 
       // $('<div class="newMusic">')
       // var newAlbum = $('<img>').attr('src', result[i].images[1].url);
