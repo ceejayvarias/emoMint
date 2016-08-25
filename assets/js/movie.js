@@ -2,7 +2,7 @@
 
 var database = firebase.database();
 
-database.ref().on('child_changed', function(snap, prevChildKey){
+database.ref().on('child_added', function(snap, prevChildKey){
     snap.val().emotion;
     var id;
     if(snap.val().emotion == 'happy') {
@@ -22,10 +22,13 @@ database.ref().on('child_changed', function(snap, prevChildKey){
       var moviePosters = {
         movie1 : "http://image.tmdb.org/t/p/w500" + response.results[0].poster_path,
         movie2 : "http://image.tmdb.org/t/p/w500" + response.results[1].poster_path,
-        movie3 : "http://image.tmdb.org/t/p/w500" + response.results[2].poster_path
+        movie3 : "http://image.tmdb.org/t/p/w500" + response.results[2].poster_path,
 	}
 
-	snap.child("movies").ref.set(moviePosters);
+    if (snap.child("movies").val() == null) {
+    	snap.child("movies").ref.set(moviePosters);
+    }
+
 
     });
 });

@@ -43,15 +43,26 @@
 	</nav>
 	<!-- Photo booth -->
 	<div id="photoBooth" class="container-fluid">
-		<h1>Snap your emotion</h1>
-		<div id="detection"></div>
+		<div class="row">
+			<div class="col-lg-6">
+				<h1>Snap your emotion</h1>
+			</div>
+			<div class="col-lg-6">
+				
+			</div>
+		</div>
 		<!-- Image box -->
 		<!--        <img id="photo" alt="The screen capture will appear in this box.">  -->
 		<form id="up-form">
 			<div class="row">
 				<div class="col-sm-6">
-					<div id="personPhoto"></div>
-					<input class ="btn btn-default picUpload" type="file" multiple />
+					<div class="col-sm-6">
+						<div id="personPhoto"></div>
+					</div>
+					<div class="col-sm-6">
+						<div id="detection"></div>
+					</div>
+					<input id="picUpload" class ="btn btn-default" type="file" multiple />
 				</div>
 				<div class="col-sm-6">
 					<input id="textJournal" type="text" name="journal">

@@ -18,12 +18,12 @@ database.ref().on('child_added', function(snapshot, prevChildkey){
 	i.attr('src', image);
 	i.css('width', 50);
 	row.attr('data-date', date);
-	row.attr('data-movie1', movie.movie1);
-	row.attr('data-movie2', movie.movie2);
-	row.attr('data-movie3', movie.movie3);
-	row.attr('data-music1', music.album1);
-	row.attr('data-music2', music.album2);
-	row.attr('data-music3', music.album3);
+	// row.attr('data-movie1', movie.movie1);
+	// row.attr('data-movie2', movie.movie2);
+	// row.attr('data-movie3', movie.movie3);
+	// row.attr('data-music1', music.album1);
+	// row.attr('data-music2', music.album2);
+	// row.attr('data-music3', music.album3);
 	row.attr('data-image', image);
 	row.attr('data-emotion', emotion);
 	row.addClass('log');

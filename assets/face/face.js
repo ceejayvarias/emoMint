@@ -22,7 +22,7 @@ var onUpload = function(err, metadata) {
 		imageReady: function(err, domImage) {
 			$('#personPhoto').empty(); 
 			$('#personPhoto').append(domImage); 
-			$('#detection').html('<h2 class="col-lg-4-offset-8">Detecting emotions...</h2>')         
+			$('#detection').html('<h2 class="col-lg-4-offset-8" style="color: black">Detecting emotions...</h2>')         
 		},
 	});
 
@@ -31,16 +31,14 @@ api.request('detection/detect', {
 		url: metadata.url
 	}, function(err, result) {
 		console.log(err);
-		if (err) {
-			$('#personPhoto').text('Load failed.');
-			$('#personPhoto').empty(); 
-			$('#detection').html('<h3 class="col-lg-4-offset-8">Detection failed. Please take another picture or try again!</h3>'); 
+		if (err) { 
+			$('#detection').html('<h2 class="col-lg-4-offset-8" style="color: red">Detection failed. Please take another picture or try again!</h3>'); 
 			return;
 		}
 			console.log(result);
 			console.log(result.face[0].attribute);
 			storeFace(result.face[0].attribute);
-			$('#detection').html('<h2 class="col-lg-4-offset-8">Upload Success! See results below!</h2>');
+			$('#detection').html('<h2 class="col-lg-4-offset-8" style="color: lightgreen">Upload Success! See results below!</h2>');
 	});
 };
 
