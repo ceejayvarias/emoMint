@@ -67,28 +67,31 @@
 </div>
 </div>
 <!-- Mint of the day -->
-<div id="mintOfTheDay" class="container-fluid">
+<div id="mintOfTheDay" class="container-fluid col-lg-12">
 <h1>Mint of the day</h1>
 <div class="recommendedMusic container">
 	<div class ="row">
-		<div class ="row">
-			<div class="col-sm-1">
-				<h2>Movie</h2>
-				<div id="poster">
+			<div class="col-lg-6">
+				<div id="selfie"></div>
+			</div>
+			<div class="col-lg-6">
+				<div class="panelLog panel panel-primary">
+					<div class="panel-heading">Movies</div>
+					<ul id="poster">
+					</ul>
+				</div>
+				<div class="panelLog panel panel-primary">
+					<div class="panel-heading">Music</div>
+					<ul id="cover">
+					</ul>
 				</div>
 			</div>
-		</div>
-		<div class ="row">
-			<div class="col-sm-6 ">
-				<h2>Music</h2>
-			</div>
-		</div>
 	</div>
 </div>
 </div>
 <!-- Mint Log -->
 <div id="mintLog" class="container-fluid">
-<div class="panel panel-primary">
+<div class="panel panel-primary" id="panelMint">
 	<div class="panel-heading">Mint Log</div>
 	<table class="table">
 		<thead>
