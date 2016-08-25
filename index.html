@@ -20,13 +20,14 @@
 					</button>
 					<a id="0" class="navbar-brand"  href="#">emoMint</a>
 				</div>
-				<div>
-					<div class="collapse navbar-collapse" id="myNavbar">
+
+	<!-- Navbar -->
+					<!-- <div class="collapse navbar-collapse" id="myNavbar">
 						<ul class="nav navbar-nav">
 							<li id="1"><a href="#photoBooth ">Snap Your Emotion</a></li>
 							<li id ="2"><a href="#mintOfTheDay"> Mint of your day</a></li>
 							<li id="3"><a href="#mintLog">Mint Log</a></li>
-							<!-- Log In/Sign up -->
+
 							<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login/Sign up <span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><a>Username <input type="text"> Password <input type="text"> </a></li>
@@ -35,11 +36,10 @@
 								</div>
 								<li id="4"><a href="#signUp">New User</a></li>
 							</ul>
-						</li>
-					</ul>
-				</div>
+							</li>
+						</ul>
+					</div> -->
 			</div>
-		</div>
 	</nav>
 	<!-- Photo booth -->
 	<div id="photoBooth" class="container-fluid">
@@ -47,13 +47,23 @@
 		<div id="detection"></div>
 		<!-- Image box -->
 		<!--        <img id="photo" alt="The screen capture will appear in this box.">  -->
-		<div class ="row">
-			<form class="col-sm-6" id="up-form">
-				<div id="personPhoto"></div>
-				<input class ="btn btn-default picUpload" type="file" multiple />
-				<button id ="snap" type="submit" class="btn btn-default">Upload</button>
-			</form>
-		</div>
+		<form id="up-form">
+			<div class="row">
+				<div class="col-sm-6">
+					<div id="personPhoto"></div>
+					<input class ="btn btn-default picUpload" type="file" multiple />
+				</div>
+				<div class="col-sm-6">
+					<input id="textJournal" type="text" name="journal">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<button id ="snap" type="submit" class="btn btn-default">Upload</button>
+				</div>
+			</div>
+		</form>
+		
 		<!-- Capture picture with webcam  -->
 		<!--   <p>Capture your mood</p>
 		<div class="row">
@@ -64,24 +74,27 @@
 		</div>
 	</div>   -->
 	<!-- detecting the smile % -->
-</div>
-</div>
+	</div>
 <!-- Mint of the day -->
 <div id="mintOfTheDay" class="container-fluid col-lg-12">
 <h1>Mint of the day</h1>
 <div class="recommendedMusic container">
 	<div class ="row">
 			<div class="col-lg-6">
-				<div id="selfie"></div>
+				<div class="panelEntry panel panel-primary">
+					<div class="panel-heading">Mint Entry</div>
+					<div id="selfie"></div>
+					<span id="entry"></span>
+				</div>
 			</div>
 			<div class="col-lg-6">
-				<div class="panelLog panel panel-primary">
-					<div class="panel-heading">Movies</div>
+				<div class="panelLog panel panel-warning">
+					<div class="panel-heading">Suggested Movies</div>
 					<ul id="poster">
 					</ul>
 				</div>
-				<div class="panelLog panel panel-primary">
-					<div class="panel-heading">Music</div>
+				<div class="panelLog panel panel-warning">
+					<div class="panel-heading">Suggested Music</div>
 					<ul id="cover">
 					</ul>
 				</div>

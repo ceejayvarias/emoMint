@@ -1,7 +1,7 @@
 // Initialize Firebase
 var database = firebase.database();
 
-database.ref().on("child_added", function(childSnapshot, prevChildKey){
+database.ref().on("child_changed", function(childSnapshot, prevChildKey){
 
 var emotion = childSnapshot.val().emotion;
 

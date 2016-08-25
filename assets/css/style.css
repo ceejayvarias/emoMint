@@ -101,6 +101,10 @@ div .newMusic img {
   height: 100%;
 }
 
+.panel{
+  text-align: center;
+}
+
 .panelLog{
   height: 100%;
   width: 100%;
@@ -108,10 +112,42 @@ div .newMusic img {
 }
 
 li {
-  float: left;
+  display: inline-block;
   margin: 10px;
+}
+
+li > img{
+  width: 100px;
 }
 
 tr:hover {
   background-color: lightblue;
+}
+
+#selfie {
+  height: 100%;
+  margin: 10px;
+}
+
+#selfie > img{
+  width: 200px;
+}
+
+#textJournal {
+  width: 100%;
+  height: 200px;
+  color: black;
+}
+
+#snap {
+  width: 100%;
+  margin: 10px 0;
+}
+
+#snap:hover {
+  background-color: lightgreen;
+}
+
+#personPhoto {
+  height: 200px;
 }
