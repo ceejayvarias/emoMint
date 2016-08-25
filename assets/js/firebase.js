@@ -4,8 +4,8 @@ var database = firebase.database();
 database.ref().on('child_added', function(snapshot, prevChildkey){
 	// console.log(snapshot.val().emotion);
 	var date = snapshot.val().date; //must convert later
-	var convertedDate = moment(date).format("MMM-DD-YYYY hh:mm a")
-	console.log("time converting: " + convertedDate);
+	// var convertedDate = moment(date).format("MMM-DD-YYYY hh:mm a")
+	// console.log("time converting: " + convertedDate);
 	var emotion = snapshot.val().emotion;
 	var movie = snapshot.val().movies;
 	var music = snapshot.val().albums;
@@ -17,7 +17,7 @@ database.ref().on('child_added', function(snapshot, prevChildkey){
 	var row = $('<tr>');
 	i.attr('src', image);
 	i.css('width', 50);
-	row.attr('data-date', convertedDate);
+	row.attr('data-date', date);
 	row.attr('data-movie1', movie.movie1);
 	row.attr('data-movie2', movie.movie2);
 	row.attr('data-movie3', movie.movie3);
@@ -32,7 +32,7 @@ database.ref().on('child_added', function(snapshot, prevChildkey){
 	var tdImage = $('<td>');
 	tdImage.append(i);
 	var tdDate = $('<td>');
-	tdDate.text(convertedDate);
+	tdDate.text(date);
 	var tdEmotion = $('<td>');
 	tdEmotion.text(emotion);
 	row.append(tdImage);
