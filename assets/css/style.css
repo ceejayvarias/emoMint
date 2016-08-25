@@ -90,5 +90,8 @@ div .newMusic img {
   .table {
     color: black;
   }
-
+.picUpload{
+    display: block;
+    position: relative
+}
   

@@ -58,13 +58,16 @@
 
  <!-- Image box -->
 <!--        <img id="photo" alt="The screen capture will appear in this box.">  -->
-       <div id='personPhoto'></div>
+<div class ="row">
 
-      <!-- choose yours picture from personal file -->
-    <form id="up-form">
-      <input type="file" multiple />
-      <button id ="snap" type="submit" class="btn btn-default">Choose your picture</button>
+    <form class="col-sm-6" id="up-form">
+     <!-- <button id ="snap" type="submit" class="btn btn-default">  -->
+     <input class ="btn btn-default picUpload" type="file" multiple />
+     <!-- </button> -->
    </form>
+
+</div>
+
 
 <!-- Capture picture with webcam  -->
 <!--   <p>Capture your mood</p>
@@ -89,8 +92,8 @@
 
   <div class="recommendedMusic container">
   <div class ="row">
-
-  <div class="col-sm-6">
+     <div class ="row">
+  <div class="col-sm-1">
       <h2>Movie</h2>
        <div id="poster">
   </div>
@@ -99,12 +102,14 @@
   <img src="">
 <div id ="movies" type="submit" class="btn btn-default">Movies</div>
   </div>
-
+    </div>
     </div>
 
+    <div class ="row">
     <div class="col-sm-6 ">
   <h2>Music</h2>
- <div id ="music" type="submit">Music</div>
+ <div id ="music" type="submit" class="btn btn-default">Music</div>
+  </div>
   </div>
   </div>
 
