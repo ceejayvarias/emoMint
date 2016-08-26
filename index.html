@@ -10,26 +10,24 @@
 	</head>
 	<body data-spy="scroll" data-target=".navbar" data-offset="50">
 		<!-- Nav Bar -->
-		<div class="row">
-		<nav class="navbar navbar-inverse navbar-fixed-top" id ="navbar">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					</button>
-					<a id="logo" class="navbar-brand"  href="#">emoMint</a> 
-				</div>
-
-	<!-- Navbar --> 
-
+		<div class="row container">
+			<nav class="navbar navbar-inverse navbar-fixed-top" id ="navbar">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+						<a id="logo" class="navbar-brand"  href="#">emoMint</a>
+					</div>
+					<!-- Navbar -->
 					<div class="collapse navbar-collapse" id="myNavbar">
 						<ul class="nav navbar-nav">
 							<!-- <li id="1"><a href="#photoBooth ">Snap Your Emotion</a></li> -->
-						<!-- 	<li id ="2"><a href="#mintOfTheDay"> Mint of your day</a></li>
+							<!-- 	<li id ="2"><a href="#mintOfTheDay"> Mint of your day</a></li>
 							<li id="3"><a href="#mintLog">Mint Log</a></li> -->
-	
+							
 							<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login/Sign up <span class="caret"></span></a>
 							<ul class="dropdown-menu btn btn-sucess">
 								<li><a>Username <input type="text"> Password <input type="text"> </a></li>
@@ -38,163 +36,139 @@
 								</div>
 								<li id="4"><a href="#signUp"> Click here to sign up!</a></li>
 							</ul>
-							</li>
-						</ul>
-					</div>
+						</li>
+					</ul>
+				</div>
 			</div>
-	</nav>
-</div>
-
-<!-- Mint Log -->
-<div class="row">
-	<div class= "col-lg-4">
-		<div id="mintLog" class="container-fluid">
-			<div class="panel panel-success" id="panelMint">
-				<div class="panel-heading">Mint Log</div>
-				<table class="table">
-					<thead>
-					<tr>
-					<th>Selfie</th>
-					<th>Date</th>
-					<th>Emotion</th>
-					</tr>
-					</thead>
-					<tbody id="table-body">
-					</tbody>
-				</table>
-			</div>
-		</div>
+		</nav>
 	</div>
-
-	<!-- Mint of the day -->
-	<div id="mintOfTheDay" class="container-fluid col-lg-8">
-		<div class="recommendedMusic container">
-
-					<div class="col-lg-6">
-						<div class="panelEntry panel panel-success">
-							<div class="panel-heading">Mint Entry</div>
-							<div id="selfie"></div>
-							<span id="entry"></span>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="panelLog panel panel-success">
-							<div class="panel-heading">Suggested Movies</div>
-							<ul id="poster">
-							</ul>
-						</div>
-						<div class="panelLog panel panel-success">
-							<div class="panel-heading">Suggested Music</div>
-							<ul id="cover">
-							</ul>
-						</div>
-					</div>
-		</div>
-	</div>
-</div>
-<!-- 
-<div class ="col-lr-9">
-	<div class ="row">
-	<div class="col-lg-1">
-	
-		
-	</div>
-	
-	</div>
-
-
-
-
-	<div class ="row">
-	<div class="col-lg-1">
-		
-	</div>
-	
-	</div>
-</div>
-
-
- -->
-
-
-
-</div>
-
-<!-- Photo booth --><!-- 
-	<div class="row">
-	<div id="photoBooth" class="container-fluid col-sm-12">
-		
-			<div class="col-lg-6">
-				<h1>Snap your emotion</h1>
-			</div>
-			<div class="col-lg-6">
+	<!-- Mint Log -->
+	<div class="row" id="secondRow">
+		<div class= "col-lg-3">
+		<!-- Image box -->
+		<!--<img id="photo" alt="The screen capture will appear in this box.">  -->
+			<form id="up-form">
+				<div id="personPhoto" >
+					<img id="placepic" src="assets/css/person1.png">
+				</div>
 				
-			</div>
-		</div> -->
-<!-- Image box -->
-		<!--        <img id="photo" alt="The screen capture will appear in this box.">  -->
-	
-		<form id="up-form">
-		
-						<div id="personPhoto" >
-							<img class ="placepic" src="assets/css/person1.png">
-						</div>
-		
-						<div id="detection"></div>
+				<div id="detection"></div>
 				<div>
 					<input id="picUpload" class ="btn btn-default" type="file" multiple />
 				</div>
 				<div>
-					<input id="textJournal" type="text" name="journal">
+					<input id="textJournal" type="text" name="journal" placeholder="Type in journal entry...">
 				</div>
-		
-		
+				
+				
 				<div>
 					<button id ="snap" type="submit" class="btn btn-default">Upload</button>
 				</div>
-		</form>
+			</form>
+		</div>
+		<!-- Mint of the day -->
+		<div id="mintOfTheDay" class="col-lg-9">
+			<div class="recommendedMusic container">
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="row">
+							<div class="panelEntry panel panel-success">
+								<div class="panel-heading">Mint Entry</div>
+								<div id="selfie"></div>
+								<p id="entry"></p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="panelLog panel panel-success">
+									<div class="panel-heading">Suggested Movies</div>
+									<ul id="poster">
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="panelLog panel panel-success">
+									<div class="panel-heading">Suggested Music</div>
+									<ul id="cover">
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div id="mintLog" class="container">
+							<div class="panel panel-success" id="panelMint">
+								<div class="panel-heading">Mint Log</div>
+								<div class="table-responsive">
+									<table class="table table-fixed">
+										<thead>
+											<tr>
+												<th>Selfie</th>
+												<th>Date</th>
+												<th>Emotion</th>
+											</tr>
+										</thead>
+										<tbody id="table-body">
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+<!-- Photo booth --><!--
+<div class="row">
+	<div id="photoBooth" class="container-fluid col-sm-12">
 		
-		<!-- Capture picture with webcam  -->
-		<!--   <p>Capture your mood</p>
-		<div class="row">
+		<div class="col-lg-6">
+			<h1>Snap your emotion</h1>
+		</div>
+		<div class="col-lg-6">
+			
+		</div>
+	</div> -->
+
+	
+	<!-- Capture picture with webcam  -->
+	<!--   <p>Capture your mood</p>
+	<div class="row">
 			<div class="camera col-lg-4">
 			<video id="video">Video stream not available.</video>
 			<button id="startbutton" class="btn btn-default">Take photo</button>
 			<canvas id="canvas" class="col-lg-4"></canvas>
-		</div>
-	</div>   -->
-	<!-- detecting the smile % -->
 	</div>
+</div>   -->
 
 <!-- SignUp Page -->
-<!-- <div id="section41" class="container-fluid">
-</div> -->
+<div class ="row" id="thirdRow">
 <div id="signUp" class="container-fluid">
-<div class ="row">
-<div class="container signup">
-	<h2> Sign Up</h2>
-	<form role="form">
-		<div class="form-group has-success">
-			<label for="email">Email:</label>
-			<input type="email" class="form-control" id="signup" placeholder="Enter email">
-		</div>
-		<div class="form-group has-success">
-			<label for="pwd">Password:</label>
-			<input type="password" class="form-control" id="signup" placeholder="Enter password">
-			<label for="pwd">Re-enter Password:</label>
-			<input type="password" class="form-control" id="signup" placeholder="Re-enter password">
-		</div>
-		<div class="checkbox has-success">
-			<label><input type="checkbox"> Remember me</label>
-		</div>
-		<button type="submit" class="btn btn-default">Submit</button>
-	</form>
+	<div class="container signup">
+		<h2> Sign Up</h2>
+		<form role="form">
+			<div class="form-group has-success">
+				<label for="email">Email:</label>
+				<input type="email" class="form-control" id="signup" placeholder="Enter email">
+			</div>
+			<div class="form-group has-success">
+				<label for="pwd">Password:</label>
+				<input type="password" class="form-control" id="signup" placeholder="Enter password">
+				<label for="pwd">Re-enter Password:</label>
+				<input type="password" class="form-control" id="signup" placeholder="Re-enter password">
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox">Remember me</label>
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+</div>
+</div>
+</div>
 
-</div>
-</div>
-</div>
-</div>
-<!-- Front end Display functions -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
@@ -205,6 +179,7 @@
 <script type="text/javascript" src ="assets/js/music.js"></script>
 <script type="text/javascript" src ="assets/js/movie.js"></script>
 <script type="text/javascript" src="assets/js/firebase.js"></script>
+
 <!-- FrontEnd functions -->
 <!-- <script type="text/javascript">
 var scrollPosition = [
@@ -217,5 +192,6 @@ html.data('previous-overflow', html.css('overflow'));
 html.css('overflow', 'hidden');
 window.scrollTo(scrollPosition[0], scrollPosition[1]);
 </script> -->
+
 </body>
-</hsuccesstml>
+</html>
