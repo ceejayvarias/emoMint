@@ -38,7 +38,8 @@ database.ref().on('child_added', function(snapshot, prevChildkey){
 $(document).on('click', '.log', function(){
 	var key = $(this).data('key');
 	var movie = [], music = [];
-	database.ref().child(key).on('value', function(snapshot){
+	var element = this;
+	database.ref().child(key).once('value', function(snapshot){
 		var movieRef = snapshot.child("movies");
 		var musicRef = snapshot.child("albums");
 		music.push(musicRef.val().album1);
@@ -47,29 +48,29 @@ $(document).on('click', '.log', function(){
 		movie.push(movieRef.val().movie1);
 		movie.push(movieRef.val().movie2);
 		movie.push(movieRef.val().movie3);
+		$('#poster').empty();
+		$('#cover').empty();
+		$('#selfie').empty();
+		// console.log(this);
+		var i = $('<img>');
+		$('#selfie').append(i.attr('src', $(element).data('image')));
+
+		//set movies
+		for (var j = 0; j < 3; j++) {
+			var li = $('<li>');
+			var i = $('<img>');
+			var film = "movie" + j;
+			li.append(i.attr('src', movie[j]));
+			$('#poster').append(li);
+		}
+
+		//set music
+		for (var j = 0; j < 3; j++) {
+			var li = $('<li>');
+			var i = $('<img>');
+			li.append(i.attr('src', music[j]));
+			$('#cover').append(li);
+		}
 	})
-	$('#poster').empty();
-	$('#cover').empty();
-	$('#selfie').empty();
-	console.log(this);
-	var i = $('<img>');
-	$('#selfie').append(i.attr('src', $(this).data('image')));
-
-	//set movies
-	for (var j = 0; j < 3; j++) {
-		var li = $('<li>');
-		var i = $('<img>');
-		var film = "movie" + j;
-		li.append(i.attr('src', movie[j]));
-		$('#poster').append(li);
-	}
-
-	//set music
-	for (var j = 0; j < 3; j++) {
-		var li = $('<li>');
-		var i = $('<img>');
-		li.append(i.attr('src', music[j]));
-		$('#cover').append(li);
-	}
 
 })
