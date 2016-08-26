@@ -2,8 +2,7 @@
 
 var database = firebase.database();
 
-database.ref().on('child_added', function(snap, prevChildKey){
-    snap.val().emotion;
+database.ref().orderByChild('date').limitToLast(1).on('child_added', function(snap, prevChildKey){
     var id;
     if(snap.val().emotion == 'happy') {
     	id = 35;
@@ -19,16 +18,15 @@ database.ref().on('child_added', function(snap, prevChildKey){
 	var movie = [];
 
 	$.ajax({url: queryURL, method: 'GET'}).done(function(response) {
-      var moviePosters = {
-        movie1 : "http://image.tmdb.org/t/p/w500" + response.results[0].poster_path,
-        movie2 : "http://image.tmdb.org/t/p/w500" + response.results[1].poster_path,
-        movie3 : "http://image.tmdb.org/t/p/w500" + response.results[2].poster_path,
-	}
-
-    if (snap.child("movies").val() == null) {
-    	snap.child("movies").ref.set(moviePosters);
-    }
-
+		var moviePosters = {
+	        movie1 : "http://image.tmdb.org/t/p/w500" + response.results[getRandNum(0, 6)].poster_path,
+	        movie2 : "http://image.tmdb.org/t/p/w500" + response.results[getRandNum(7, 13)].poster_path,
+	        movie3 : "http://image.tmdb.org/t/p/w500" + response.results[getRandNum(14, 20)].poster_path
+		}
+		
+	    // if (snap.child("movies").val() == null) {
+	    	snap.child("movies").ref.set(moviePosters);
+	    // }
 
     });
 });
