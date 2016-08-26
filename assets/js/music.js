@@ -2,7 +2,7 @@
 var database = firebase.database();
 function getRandNum(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
-  }
+}
 database.ref().orderByChild("date").limitToLast(1).on("child_added", function(childSnapshot, prevChildKey){
 
 var emotion = childSnapshot.val().emotion;
