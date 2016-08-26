@@ -11,14 +11,14 @@ var database = firebase.database();
 
 //detects the personPhoto URL and returns data
 var api = new FacePP('0ef14fa726ce34d820c5a44e57fef470', '4Y9YXOMSDvqu1Ompn9NSpNwWQFHs1hYD');
-var imageURL; //URL stored into varaible
+var imageURL; //URL stored into variable
+var journal; //storing journal entry
 var ospry = new Ospry('pk-test-r5dsrmo3nign9vbx8i8nmoyz');
 
 var onUpload = function(err, metadata) {
 	imageURL = metadata.url;
 	ospry.get({
 		url: metadata.url,
-		maxHeight: 200,
 		imageReady: function(err, domImage) {
 			$('#personPhoto').empty(); 
 			$('#personPhoto').append(domImage); 
@@ -35,10 +35,16 @@ api.request('detection/detect', {
 			$('#detection').html('<h2 class="col-lg-4-offset-8" style="color: yellow">Detection failed. Please take another picture or try again!</h3>'); 
 			return;
 		}
-			console.log(result);
-			console.log(result.face[0].attribute);
+			if ($('#textJournal').val() == '') {
+				journal = "No journal entry.";
+			}
+			else{
+				journal = $('#textJournal').val();
+			}
+			$('#textJournal').val('');
 			storeFace(result.face[0].attribute);
-			$('#detection').html('<h2 class="col-lg-4-offset-8" style="color: black">Upload Success! See results below!</h2>');
+			$('#detection').empty();
+			// $('#detection').html('<h2 class="col-lg-4-offset-8" style="color: black">Upload Success! See results below!</h2>');
 	});
 };
 
@@ -50,9 +56,7 @@ $('#up-form').submit(function(e) {
   });
 });
 
-
-var arr, str, int; //arbitrary
-
+//function that stores the inital data
 function storeFace (arr) {
 	var emotion;
 	if (arr.smiling.value > 75) {
@@ -70,8 +74,10 @@ function storeFace (arr) {
 	database.ref().push({
 		emotion: emotion,
 		date: $.now(),
-		image: imageURL
+		image: imageURL,
+		journal : journal,
+		movieuploaded : true,
+		musicuploaded : true
 	})
-	console.log(emotion);
-	console.log(arr.smiling.value);
+	$('#entry').html("Emotion: " + emotion + "<br>" + journal);
 }
