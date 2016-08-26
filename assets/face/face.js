@@ -39,6 +39,7 @@ api.request('detection/detect', {
 			console.log(result.face[0].attribute);
 			storeFace(result.face[0].attribute);
 			$('#detection').html('<h2 class="col-lg-4-offset-8" style="color: lightgreen">Upload Success! See results below!</h2>');
+			sessionStorage.setItem('refresh', "true");
 	});
 };
 

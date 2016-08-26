@@ -9,6 +9,7 @@ var emotion = childSnapshot.val().emotion;
 
 var queryURL = "https://api.spotify.com/v1/search?query=" + emotion + "&offset=0&limit=50&type=album";
 
+
 $.ajax({url: queryURL, method: 'GET'})
   .done(function(response){
 
@@ -42,6 +43,6 @@ $.ajax({url: queryURL, method: 'GET'})
 
 }); // closes database.ref() 
 
-
+        
 
 
