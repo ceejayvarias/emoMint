@@ -32,14 +32,15 @@ api.request('detection/detect', {
 	}, function(err, result) {
 		console.log(err);
 		if (err) { 
-			$('#detection').html('<h2 class="col-lg-4-offset-8" style="color: red">Detection failed. Please take another picture or try again!</h3>'); 
+			$('#detection').html('<h2 class="col-lg-4-offset-8" style="color: yellow">Detection failed. Please take another picture or try again!</h3>'); 
 			return;
 		}
 			console.log(result);
 			console.log(result.face[0].attribute);
 			storeFace(result.face[0].attribute);
-			$('#detection').html('<h2 class="col-lg-4-offset-8" style="color: lightgreen">Upload Success! See results below!</h2>');
-			sessionStorage.setItem('refresh', "true");
+
+			$('#detection').html('<h2 class="col-lg-4-offset-8" style="color: black">Upload Success! See results below!</h2>');
+
 	});
 };
 
