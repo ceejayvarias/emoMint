@@ -1,26 +1,91 @@
+html{
+  height:1000px;
+}
 body {
-    position: relative;
+ /*   background-image: url("emoMint.jpg");*/
+    background:linear-gradient(to bottom, #646464 0%,#0e0e0e 100%);
+    border-top: 1px solid #444444;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-repeat: repeat;
     width: 100%;
-    max-width: 960px;
+    /*height: 100%;*/
     margin: 0 auto;
     clear: both;
+}
+
+#titlelogo{
+  width: 10px;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: middle;
+    border-top: 1px solid #ddd;
+    color:gray;
+}
+
+#slogan {
+    font-size: 25px;
+    color: black;
+    position: relative;
+    left: 35%;
+    float: left;
+    top: 70px;
+    /* right: 30px; */
+    font-family: calibri;
+    font-size: 18px;
+}
+
+th{
+  color:#44aa52;
+  font-weight:bolder;
+}
+
+h1{
+  color: white; 
+}
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 20px;
+    font-size: 38px;
+    line-height: 30px;
+}
+
+.navbar-inverse {
+    background-color: #fff;
+    border-color: #44aa52;
+}
+
+.dropdown-toggle{
+  color:#44aa52;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #44aa52;
+    
+}
+
+
+.navbar-inverse .navbar-nav:hover {
+    color: white;
+    background-color: green;
+}
+
+.container-fluid{
+      box-shadow: 0px 10px 5px #888888;
+}
+  .container{
+    color: white;
+    /*position: relative;*/
+    width: 100%;
+    /*margin: 0 auto;*/
+    /*clear: both;  */
   }
 
-  /*.container{
-    position: relative;
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    clear: both;  
-  }*/
-
-  #myNavbar{
-    position: relative;
-    left:350px;
-   }
-
   .navbar{
-    max-width: 960px;
     margin: 0 auto;
     clear: both; 
 
@@ -32,49 +97,272 @@ body {
     
   }
 
+  li.dropdown{
+    color: green;
+  }
+
+
+  .emoMintLogo{
+    width: 30%;
+    position: relative;
+    top: 1pc;
+    left: 1px;
+}
+
+
+ div.panel-heading {
+    color: #3c763d;
+    background-color: black;
+    border-color: #d6e9c6;
+    }
+
   #photoBooth {
     padding-top:50px;
-    height:1000px;
+    /*height: 950px;*/
     color: #fff; 
-    background-color: #1E88E5;
+    /*background-color: #1E88E5*/;
     width: 100%;
-    max-width: 960px;
+   /* max-width: 960px;*/
     margin: 0 auto;
     clear: both;  }
 
   #mintOfTheDay {
-    padding-top:50px;
-    height:1000px;
     color: #fff; 
-    background-color: #673ab7;}
+   /* position: relative;
+    top: 40px;*/
+}
+
+#secondRow{
+  position: relative;
+  top:120px;
+  height: 100%
+}
 
   #mintLog {
-    padding-top:50px;
-    height:1000px;
-    color: #fff; 
-    background-color: #ff9800;}
-
-  #signUp{
-    padding-top:50px;
-    height:1000px;
-    color: #fff; 
-    background-color: #00bcd4;}
+    height: 760px;
+    color: #fff;
+    /* background-color: #ff9800; */
+    padding-left: 30px;
+}
 
   #signUp {
-    padding-top:50px;
-    height:1000px;
-    color: #fff; 
-    background-color: #009688;
+    /*height:1000px;*/
+    margin: 50px;
+    color: black; 
     text-align: center;
-  }
-
-  input{
-    max-width: 900px;
-  }
+}
 
   .checkbox label, .radio label {
     min-height: 20px;
-    padding-left: 40px;
   }
 
-  
+div .newMusic img {
+  width: 210px;
+}
+.btn-default {
+    color:  #44aa52;
+    background-color:   white;
+    border-color: #44aa52;
+}
+
+#snap:hover {
+    background-color: #44aa52;
+}
+
+.btn-default:hover {
+    color: white;
+    background-color: #44aa52;
+    border-color: #white;
+}
+.table {
+    color: black;
+}
+
+#picUpload{
+    width: 100%;
+}
+
+#panelMint{
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+}
+
+
+.panel-success>.panel-heading {
+    color: #ffffff;
+    background-color: #44aa52;
+    border-color: #44aa52;
+    font-family: "calibri", serif;
+}
+
+.panel-success{
+  border-radius: 0px;
+  box-shadow: 0px 10px 40px #888888;
+
+}
+.panel-heading{
+  background-color:#dff0d8; 
+
+}
+
+.panel{
+  text-align: center;
+}
+
+.panelLog{
+  height: 460px;
+  width: 100%;
+  /*overflow: auto;*/
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.panel-body{
+  max-height: 398px;
+  overflow-y: scroll;
+}
+
+#poster, #cover{
+  margin-top: 18px;
+}
+
+ul {
+  vertical-align: middle;
+}
+
+li {
+  display: inline-block;
+  margin: 10px;
+}
+
+li > a > img{
+  width: 140px;
+}
+
+.log:hover {
+  background-color: lightblue;
+}
+
+th{
+  text-align: center;
+}
+
+#selfie > img {
+    width: 200px;
+    height: 200px;
+}
+
+#textJournal {
+  width: 100%;
+  height: 275px;
+  text-align: top;
+}
+
+#placepic{
+  width: 100%;
+}
+
+#snap {
+  width: 100%;
+  margin: 10px 0;
+}
+
+#personPhoto {
+  width: 100%;
+  height: 280px;
+  margin-bottom: 5px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #44aa52;
+  overflow: hidden;
+  text-align: center;
+}
+
+#helper{
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+#personPhoto > img {
+  width: 100%;
+  height: 100%;
+}
+
+#helper > img {
+  width: 100%;
+  height: 100%;
+}
+
+h2 {
+  font-size: 15px;
+}
+.formgroup{
+  position: relative;
+  bottom:20%;
+  display: block;
+  align-content: center;
+}
+
+#signup{
+    display: block;
+    width: 33%;
+    position: relative;
+    left: 34%;
+}
+
+input[type=checkbox]:checked{
+  background-color: #f00;
+}
+
+#secondRow{
+  margin-top: 80px;
+  margin-left: 20px;
+  height: 100%;
+}
+
+#entry{
+  margin-top: 8px;
+  color: black;
+  height: 200px;
+}
+
+.thumbnail:hover {
+  text-align: center;
+     -webkit-transform: scale(1.2);
+     -moz-transform: scale(1.2);
+     -ms-transform: scale(1.2);
+     transform: scale(1.2);
+     -webkit-transition: -webkit-transform .3s ease-out;
+     -webkit-transition: transform .3s ease-out;
+     -moz-transition: transform .3s ease-out;
+     transition: transform .3s ease-out;
+     z-index: 999;
+ }
+
+ #mynav{
+  color:green;
+ }
+.nav{
+    position: relative;
+    top: 33px;
+    margin-bottom: 0;
+    list-style: none;
+    /*left: 290px;*/
+    right: 0;
+}
+ .navbar-inverse .navbar-brand {
+    color: #44aa52;
+}
+
+.checkbox label, .radio label {
+    min-height: 20px;
+    position: relative;
+    left: 30px;
+}
+
+.table-responsive{
+  max-height: 700px;
+  overflow-y: scroll;
+}
