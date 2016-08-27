@@ -1,10 +1,15 @@
+html{
+  height:1000px;
+}
 body {
-    background-image: url("emoMint.jpg");
+ /*   background-image: url("emoMint.jpg");*/
+    background:linear-gradient(to bottom, #646464 0%,#0e0e0e 100%);
+    border-top: 1px solid #444444;
     background-repeat: no-repeat;
     background-size: 100%;
     background-repeat: repeat;
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
     margin: 0 auto;
     clear: both;
 }
@@ -20,29 +25,33 @@ h1{
     line-height: 30px;
 }
 
-.navbar-inverse .navbar-brand {
-    color: lightgreen;
+.navbar-inverse {
+    background-color: #fff;
+    border-color: #44aa52;
+}
+
+.dropdown-toggle{
+  color:#44aa52;
 }
 
 .navbar-inverse .navbar-nav>li>a {
-    color: lightgreen;
-    position: relative;
-    left: 744%;
-}
-
-.navbar-nav>li>.dropdown-menu {
-    margin-top: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    position: absolute;
-    left: 460%;
-}
-
-.navbar-inverse .navbar-nav>li>a {
-    color: lightgreen;
+    color: #44aa52;
     
 }
 
+
+.navbar-inverse .navbar-nav:hover {
+    color: white;
+    background-color: green;
+}
+
+#textJournal{
+
+
+}
+.container-fluid{
+      box-shadow: 0px 10px 5px #888888;
+}
   .container{
     color: white;
     /*position: relative;*/
@@ -50,11 +59,6 @@ h1{
     /*margin: 0 auto;*/
     /*clear: both;  */
   }
-
-  #myNavbar{
-    position: relative;
-    left:350px;
-   }
 
   .navbar{
     margin: 0 auto;
@@ -67,6 +71,19 @@ h1{
     clear: both; 
     
   }
+
+  li.dropdown{
+    color: green;
+  }
+
+
+  .emoMintLogo{
+    width: 30%;
+    position: relative;
+    top: 1pc;
+    left: 1px;
+}
+
 
  div.panel-heading {
     color: #3c763d;
@@ -85,9 +102,16 @@ h1{
     clear: both;  }
 
   #mintOfTheDay {
-    /*height:1000px;*/
     color: #fff; 
-   /* background-color: lightgreen;*/}
+   /* position: relative;
+    top: 40px;*/
+}
+
+#secondRow{
+  position: relative;
+  top:120px;
+  height: 100%
+}
 
   #mintLog {
     height: 500px;
@@ -111,11 +135,20 @@ div .newMusic img {
   width: 210px;
 }
 .btn-default {
-    color:  #3c763d;
-    background-color: #dff0d8;
-    border-color: #ccc;
+    color:  #44aa52;
+    background-color:   white;
+    border-color: #44aa52;
 }
 
+#snap:hover {
+    background-color: #44aa52;
+}
+
+.btn-default:hover {
+    color: white;
+    background-color: #44aa52;
+    border-color: #white;
+}
 .table {
     color: black;
 }
@@ -130,6 +163,18 @@ div .newMusic img {
   width: 100%;
 }
 
+
+.panel-success>.panel-heading {
+    color: #ffffff;
+    background-color: #44aa52;
+    border-color: #44aa52;
+}
+
+.panel-success{
+  border-radius: 0px;
+  box-shadow: 0px 10px 40px #888888;
+
+}
 .panel-heading{
   background-color:#dff0d8; 
 
@@ -182,10 +227,6 @@ th{
   margin: 10px 0;
 }
 
-#snap:hover {
-  background-color: lightgreen;
-}
-
 #personPhoto {
   max-width: 100%;
   height: 100%;
@@ -193,7 +234,7 @@ th{
   margin-bottom: 5px;
   border-style: solid;
   border-width: 3px;
-  border-color: green;
+  border-color: #44aa52;
 }
 
 #personPhoto > img {
@@ -244,3 +285,23 @@ input[type=checkbox]:checked{
      transition: transform .3s ease-out;
      z-index: 999;
  }
+
+ #mynav{
+  color:green;
+ }
+.nav{
+    position: relative;
+    top: 33px;
+    margin-bottom: 0;
+    list-style: none;
+    left: 290px;
+}
+ .navbar-inverse .navbar-brand {
+    color: #44aa52;
+}
+
+.checkbox label, .radio label {
+    min-height: 20px;
+    position: relative;
+    left: 30px;
+}
