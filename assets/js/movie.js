@@ -2,55 +2,50 @@
 
 var database = firebase.database();
 
-database.ref().on('child_added', function(snap){
-    snap.val().emotion;
-    if(snap.val().emotion = 'happy') {
-            var id = 35;
-        } 
-    else if(snap.val().emotion = 'sad'){        
-            var id = 18;        
-    }
-    var queryURL = "http://api.themoviedb.org/3/discover/movie?with_genres=" + id + "&api_key=bcc2f00706a523f852a1b201ab755717";
+//grabs the last child that was added and sets movie suggestions
+database.ref().orderByChild('date').limitToLast(1).on('child_added', function(snap, prevChildKey){
+    var id;
+    var emotion = snap.val().emotion;
 
-    $.ajax({url: queryURL, method: 'GET'}).done(function(response) {
-             // console.log(response);
-    for (var i = 0; i < response.length; i++) {
-        var random;
-        random.push(response[i].title);
+    if(emotion == 'happy') {
+    	id = 35;
     }
-    });
+    else if(emotion == 'sad'){
+        id = 18;
+    } else if(emotion == 'content'){
+		id = 9648;
+    } else if(emotion == 'angry'){
+		id = 28;
+    }
+
+	var queryURL = "http://api.themoviedb.org/3/discover/movie?with_genres=" + id + "&api_key=bcc2f00706a523f852a1b201ab755717";
+	
+	$.ajax({url: queryURL, method: 'GET'}).done(function(response) {
+		var results = response.results;
+		var moviePosters = {
+	        movie1 : "http://image.tmdb.org/t/p/w500" + results[getRandNum(0,4)].poster_path,
+	        movie2 : "http://image.tmdb.org/t/p/w500" + results[getRandNum(5,9)].poster_path,
+	        movie3 : "http://image.tmdb.org/t/p/w500" + results[getRandNum(10,14)].poster_path,
+	        movie4 : "http://image.tmdb.org/t/p/w500" + results[getRandNum(15,20)].poster_path
+		}
+
+		if (snap.child("movieuploaded").val()) {
+	    	snap.child("movies").ref.set(moviePosters);
+	    	snap.child("movieuploaded").ref.set(false);
+	    	$('#poster').empty();
+		    for (var key in moviePosters) {
+		      var li = $('<li>');
+		      var i = $('<img>');
+		      	var a = $('<a>');
+				i.addClass('thumbnail');
+				i.attr('src', moviePosters[key]);
+				a.append(i);
+				a.attr('href', moviePosters[key]);
+				a.attr('target', '_blank');
+				li.append(a);
+		      $('#poster').append(li);
+		    }
+	    }
+	    
+	});	
 });
-
-
-//     var image = response.Poster;
-// 
-//     if(image !== "N/A"){
-//         $('#poster').attr('src', image);
-//     }
-// });
-// }
-
-// $('#movies').click(function(){
-// apiCall()
-// });
-
-
-// var randomMovieArray = ['Love Actually', 'When Harry Met Sally', 'Swingers', 'The Hangover', 'Bridesmaids', 'Just Friends', 'Airplane', 'Groundhog day', 'Old School', 'Tropic Thunder'];
-// 
-// 
-// function apiCall() {
-//     var randomNumber = Math.floor((Math.random() * randomMovieArray.length));
-//     var randomMovie = randomMovieArray[randomNumber];
-//     console.log(randomMovie);
-//     $.getJSON('https://www.omdbapi.com/?t=' + encodeURI(randomMovie)).then(function(response){
-//         var image = response.Poster;
-// 
-//         if(image !== "N/A"){
-//             $('#poster').attr('src', image);
-//         }
-//     });
-// }
-// 
-// $('#movies').click(function(){
-//     apiCall()
-// });
