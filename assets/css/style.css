@@ -14,6 +14,31 @@ body {
     clear: both;
 }
 
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: middle;
+    border-top: 1px solid #ddd;
+    color:gray;
+}
+
+#slogan {
+    font-size: 25px;
+    color: black;
+    position: relative;
+    left: 35%;
+    float: left;
+    top: 70px;
+    /* right: 30px; */
+    font-family: calibri;
+    font-size: 18px;
+}
+
+th{
+  color:#44aa52;
+  font-weight:bolder;
+}
+
 h1{
   color: white; 
 }
@@ -168,6 +193,7 @@ div .newMusic img {
     color: #ffffff;
     background-color: #44aa52;
     border-color: #44aa52;
+    font-family: "calibri", serif;
 }
 
 .panel-success{
