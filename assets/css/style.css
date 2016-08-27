@@ -70,10 +70,6 @@ h1{
     background-color: green;
 }
 
-#textJournal{
-
-
-}
 .container-fluid{
       box-shadow: 0px 10px 5px #888888;
 }
@@ -139,7 +135,7 @@ h1{
 }
 
   #mintLog {
-    height: 500px;
+    height: 760px;
     color: #fff;
     /* background-color: #ff9800; */
     padding-left: 30px;
@@ -211,9 +207,24 @@ div .newMusic img {
 }
 
 .panelLog{
-  height: 100%;
+  height: 460px;
   width: 100%;
-  overflow: auto;
+  /*overflow: auto;*/
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.panel-body{
+  max-height: 398px;
+  overflow-y: scroll;
+}
+
+#poster, #cover{
+  margin-top: 18px;
+}
+
+ul {
+  vertical-align: middle;
 }
 
 li {
@@ -222,7 +233,7 @@ li {
 }
 
 li > a > img{
-  width: 100px;
+  width: 140px;
 }
 
 .log:hover {
@@ -240,8 +251,8 @@ th{
 
 #textJournal {
   width: 100%;
-  height: 100%px;
-  color: black;
+  height: 275px;
+  text-align: top;
 }
 
 #placepic{
@@ -254,17 +265,25 @@ th{
 }
 
 #personPhoto {
-  max-width: 100%;
-  height: 100%;
-  display: inline-block;
+  width: 100%;
+  height: 400px;
   margin-bottom: 5px;
   border-style: solid;
   border-width: 3px;
   border-color: #44aa52;
+  overflow: hidden;
+  text-align: center;
+}
+
+#helper{
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
 
 #personPhoto > img {
   width: 100%;
+  height: auto;
 }
 
 h2 {
@@ -297,6 +316,7 @@ input[type=checkbox]:checked{
 #entry{
   margin-top: 8px;
   color: black;
+  height: 200px;
 }
 
 .thumbnail:hover {
@@ -331,4 +351,9 @@ input[type=checkbox]:checked{
     min-height: 20px;
     position: relative;
     left: 30px;
+}
+
+.table-responsive{
+  max-height: 700px;
+  overflow-y: scroll;
 }

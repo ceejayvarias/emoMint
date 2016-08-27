@@ -59,6 +59,7 @@ $(document).on('click', '.log', function(){
 		var journal = snapshot.child("journal").val();
 		var image = snapshot.child("image").val();
 		var emotion = snapshot.child("emotion").val();
+		var date = moment(snapshot.child("date").val()).format("MMM DD, YYYY hh:mm a");
 		music.push(musicRef.val().album1);
 		music.push(musicRef.val().album2);
 		music.push(musicRef.val().album3);
@@ -70,7 +71,7 @@ $(document).on('click', '.log', function(){
 		$('#personPhoto').empty();
 		var i = $('<img>');
 		$('#personPhoto').append(i.attr('src', image));
-		$('#entry').html("Emotion at the time: " + emotion + "<br>" + journal);
+		$('#entry').html("Date: " + date + "<br> Detected emotion: " + emotion + "<br>" + journal);
 		$('#poster').empty();
 		$('#cover').empty();
 		setEntertainment(movie, 'movie');

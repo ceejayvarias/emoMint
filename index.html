@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Bootstrap Example</title>
+	<link rel="icon" 
+      type="image/png" 
+      src="assets/branding/panellogo.png">
+		<title> emoMint </title>
+		<link rel="icon" href="assets/branding/panellogo.png" type="image/png" sizes="10x10"> 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="assets/css/reset.css">
@@ -52,7 +56,9 @@
 		<!--<img id="photo" alt="The screen capture will appear in this box.">  -->
 			<form id="up-form">
 				<div id="personPhoto" >
-					<img id="placepic" src="assets/css/person1.png">
+					<div id="helper">
+						<img id="placepic" src="assets/css/person1.png">
+					</div>
 				</div>
 				
 				<div id="detection"></div>
@@ -60,7 +66,7 @@
 					<input id="picUpload" class ="btn btn-default" type="file" multiple />
 				</div>
 				<div>
-					<input id="textJournal" type="text" name="journal" placeholder="Type in journal entry...">
+					<textarea id="textJournal" type="text" name="journal" placeholder="Type in journal entry..."></textarea>
 				</div>
 				
 				
@@ -89,8 +95,10 @@
 							<div class="col-lg-6">
 								<div class="panelLog panel panel-success">
 									<div class="panel-heading"><h4>Suggested Movies</h4></div>
-									<ul id="poster">
-									</ul>
+									<div class="panel-body">
+										<ul id="poster">
+										</ul>
+									</div>
 								</div>
 							</div>
 							<div class="col-lg-6">
