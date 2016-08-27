@@ -294,7 +294,8 @@ input[type=checkbox]:checked{
     top: 33px;
     margin-bottom: 0;
     list-style: none;
-    left: 290px;
+    /*left: 290px;*/
+    right: 0;
 }
  .navbar-inverse .navbar-brand {
     color: #44aa52;
