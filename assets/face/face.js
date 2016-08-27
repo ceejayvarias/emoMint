@@ -22,7 +22,7 @@ var onUpload = function(err, metadata) {
 		imageReady: function(err, domImage) {
 			$('#personPhoto').empty(); 
 			$('#personPhoto').append(domImage); 
-			$('#detection').html('<h2 class="col-lg-4-offset-8" style="color: black">Detecting emotions...</h2>')         
+			$('#entry').html('<h2 style="color: black">Detecting emotions...</h2>')         
 		},
 	});
 
@@ -32,7 +32,7 @@ api.request('detection/detect', {
 	}, function(err, result) {
 		console.log(err);
 		if (err) { 
-			$('#detection').html('<h2 class="col-lg-4-offset-8" style="color: yellow">Detection failed. Please take another picture or try again!</h3>'); 
+			$('#entry').html('<h2 style="color: yellow">Detection failed. Please take another picture or try again!</h3>'); 
 			return;
 		}
 			if ($('#textJournal').val() == '') {

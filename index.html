@@ -56,7 +56,9 @@
 		<!--<img id="photo" alt="The screen capture will appear in this box.">  -->
 			<form id="up-form">
 				<div id="personPhoto" >
-					<img id="placepic" src="assets/css/person1.png">
+					<div id="helper">
+						<img id="placepic" src="assets/css/person1.png">
+					</div>
 				</div>
 				
 				<div id="detection"></div>
@@ -64,7 +66,7 @@
 					<input id="picUpload" class ="btn btn-default" type="file" multiple />
 				</div>
 				<div>
-					<input id="textJournal" type="text" name="journal" placeholder="Type in journal entry...">
+					<textarea id="textJournal" type="text" name="journal" placeholder="Type in journal entry..."></textarea>
 				</div>
 				
 				
@@ -93,8 +95,10 @@
 							<div class="col-lg-6">
 								<div class="panelLog panel panel-success">
 									<div class="panel-heading"><h4>Suggested Movies</h4></div>
-									<ul id="poster">
-									</ul>
+									<div class="panel-body">
+										<ul id="poster">
+										</ul>
+									</div>
 								</div>
 							</div>
 							<div class="col-lg-6">
