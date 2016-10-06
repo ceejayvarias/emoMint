@@ -19,12 +19,9 @@ $.ajax({url: queryURL, method: 'GET'})
     var result = response.albums.items;
     var albums = {
       album1 : result[(getRandNum(0, 12))].images[1].url,
-      // album1click: result[0].external_urls.spotify,
       album2 : result[(getRandNum(13, 25))].images[1].url,
-      // album2click: result[1].external_urls.spotify,
       album3 : result[(getRandNum(26, 38))].images[1].url,
       album4 : result[(getRandNum(39, 50))].images[1].url
-      // album3click: result[2].external_urls.spotify
     }
 
     if (childSnapshot.child("musicuploaded").val()) {

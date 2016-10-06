@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	<link rel="icon" 
-      type="image/png" 
-      src="assets/branding/panellogo.png">
-		<title> emoMint </title>
-		<link rel="icon" href="assets/branding/panellogo.png" type="image/png" sizes="10x10"> 
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="assets/css/reset.css">
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" href="assets/css/style.css">
-	</head>
-	<body data-spy="scroll" data-target=".navbar" data-offset="50">
-		<!-- Nav Bar -->
-		<div class="row container">
-			<nav class="navbar navbar-inverse navbar-fixed-top" id ="navbar">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						</button>
-						<img class="emoMintLogo" src="assets/branding/logo.png"> 
-						<h3 id="slogan">The Mint of your day</h3>
-						<a id="logo" class="navbar-brand"  href="#"  ></a>
-					</div>
 
-					<!-- Navbar -->
-					<div class="collapse navbar-collapse" id="myNavbar">
-						<ul class="nav navbar-nav">
-							<!-- <li id="1"><a href="#photoBooth ">Snap Your Emotion</a></li> -->
-							<!-- 	<li id ="2"> --> 
-							<!-- <li id="3"><a href="#mintLog">Mint Log</a></li> -->
-							
-							<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login/Sign up <span class="caret"></span></a>
+<head>
+	<link rel="icon" type="image/png" src="assets/branding/panellogo.png">
+	<title> emoMint </title>
+	<link rel="icon" href="assets/branding/panellogo.png" type="image/png" sizes="10x10">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<!-- Nav Bar -->
+	<div class="row container">
+		<nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+					<img class="emoMintLogo" src="assets/branding/logo.png">
+					<h3 id="slogan">The Mint of your day</h3>
+					<a id="logo" class="navbar-brand" href="#"></a>
+				</div>
+
+				<!-- Navbar -->
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<!-- <li id="1"><a href="#photoBooth ">Snap Your Emotion</a></li> -->
+						<!-- 	<li id ="2"> -->
+						<!-- <li id="3"><a href="#mintLog">Mint Log</a></li> -->
+
+						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login/Sign up <span class="caret"></span></a>
 							<ul class="dropdown-menu btn btn-sucess">
 								<li><a>Username <input type="text"> Password <input type="text"> </a></li>
 								<div class="checkbox">
@@ -51,27 +51,27 @@
 	</div>
 	<!-- Mint Log -->
 	<div class="row" id="secondRow">
-		<div class= "col-lg-3">
-		<!-- Image box -->
-		<!--<img id="photo" alt="The screen capture will appear in this box.">  -->
+		<div class="col-lg-3">
+			<!-- Image box -->
+			<!--<img id="photo" alt="The screen capture will appear in this box.">  -->
 			<form id="up-form">
-				<div id="personPhoto" >
+				<div id="personPhoto">
 					<div id="helper">
 						<img id="placepic" src="assets/css/person1.png">
 					</div>
 				</div>
-				
+
 				<div id="detection"></div>
 				<div>
-					<input id="picUpload" class ="btn btn-default" type="file" multiple />
+					<input id="picUpload" class="btn btn-default" type="file" multiple />
 				</div>
 				<div>
 					<textarea id="textJournal" type="text" name="journal" placeholder="Type in journal entry..."></textarea>
 				</div>
-				
-				
+
+
 				<div>
-					<button id ="snap" type="submit" class="btn btn-default">Upload</button>
+					<button id="snap" type="submit" class="btn btn-default">Upload</button>
 				</div>
 			</form>
 		</div>
@@ -82,9 +82,9 @@
 					<div class="col-lg-8">
 						<div class="row">
 							<div class="panelEntry panel panel-success">
-								<div class="panel-heading"> 
-								   
-								     <h4>Mint Entry</h4>
+								<div class="panel-heading">
+
+									<h4>Mint Entry</h4>
 
 								</div>
 								<div id="selfie"></div>
@@ -94,7 +94,8 @@
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="panelLog panel panel-success">
-									<div class="panel-heading"><h4>Suggested Movies</h4></div>
+									<div class="panel-heading">
+										<h4>Suggested Movies</h4></div>
 									<div class="panel-body">
 										<ul id="poster">
 										</ul>
@@ -103,11 +104,12 @@
 							</div>
 							<div class="col-lg-6">
 								<div class="panelLog panel panel-success">
-									<div class="panel-heading"><h4>Suggested Music</h4></div>
-										<div class="panel-body">
-											<ul id="cover">
-											</ul>
-										</div>
+									<div class="panel-heading">
+										<h4>Suggested Music</h4></div>
+									<div class="panel-body">
+										<ul id="cover">
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -115,7 +117,8 @@
 					<div class="col-lg-4">
 						<div id="mintLog" class="container">
 							<div class="panel panel-success" id="panelMint">
-								<div class="panel-heading"><h4>Mint Log</h4></div>
+								<div class="panel-heading">
+									<h4>Mint Log</h4></div>
 								<div class="table-responsive">
 									<table class="table table-fixed">
 										<thead>
@@ -137,46 +140,47 @@
 		</div>
 
 	</div>
-<!-- Photo booth --><!--
+	<!-- Photo booth -->
+	<!--
 <div class="row">
-	<div id="photoBooth" class="container-fluid col-sm-12">
-		
-		<div class="col-lg-6">
-			<h1>Snap your emotion</h1>
-		</div>
-		<div class="col-lg-6">
-			
-		</div>
-	</div> -->
+<div id="photoBooth" class="container-fluid col-sm-12">
 
-	
+<div class="col-lg-6">
+<h1>Snap your emotion</h1>
+</div>
+<div class="col-lg-6">
+
+</div>
+</div> -->
+
+
 	<!-- Capture picture with webcam  -->
 	<!--   <p>Capture your mood</p>
-	<div class="row">
-			<div class="camera col-lg-4">
-			<video id="video">Video stream not available.</video>
-			<button id="startbutton" class="btn btn-default">Take photo</button>
-			<canvas id="canvas" class="col-lg-4"></canvas>
-	</div>
+<div class="row">
+<div class="camera col-lg-4">
+<video id="video">Video stream not available.</video>
+<button id="startbutton" class="btn btn-default">Take photo</button>
+<canvas id="canvas" class="col-lg-4"></canvas>
+</div>
 </div>   -->
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src = "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
-<script src="https://code.ospry.io/v1/ospry.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script type="text/javascript" src="assets/face/facepp-sdk.min.js"></script>
-<script type="text/javascript" src="assets/face/face.js"></script>
-<script type="text/javascript" src ="assets/js/music.js"></script>
-<script type="text/javascript" src ="assets/js/movie.js"></script>
-<script type="text/javascript" src="assets/js/firebase.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+	<script src="https://code.ospry.io/v1/ospry.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="assets/face/facepp-sdk.min.js"></script>
+	<script type="text/javascript" src="assets/face/face.js"></script>
+	<script type="text/javascript" src="assets/js/music.js"></script>
+	<script type="text/javascript" src="assets/js/movie.js"></script>
+	<script type="text/javascript" src="assets/js/firebase.js"></script>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<!-- FrontEnd functions -->
-<!-- <script type="text/javascript">
+	<!-- FrontEnd functions -->
+	<!-- <script type="text/javascript">
 var scrollPosition = [
 self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
 self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
@@ -189,4 +193,5 @@ window.scrollTo(scrollPosition[0], scrollPosition[1]);
 </script> -->
 
 </body>
+
 </html>
