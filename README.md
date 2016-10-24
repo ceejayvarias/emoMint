@@ -1,7 +1,6 @@
 # emoMint 
 ###<https://afternoon-coast-29711.herokuapp.com/>
-## Details:
-###Face recognition technology to capture expressions of users, outputting movies and music entertainment recommendations depending on the users’ current state of emotions. 
+## Details:<br>Face recognition technology to capture expressions of users, outputting movies and music entertainment recommendations depending on the users’ current state of emotions. 
 
 ## Technology Used:
 1. JavaScript
