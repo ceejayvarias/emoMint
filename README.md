@@ -1,5 +1,5 @@
 # emoMint 
-###<https://afternoon-coast-29711.herokuapp.com/>
+###<http://afternoon-coast-29711.herokuapp.com/>
 ## Details:<br>Face recognition technology to capture expressions of users, outputting movies and music entertainment recommendations depending on the users’ current state of emotions. 
 
 ## Technology Used:
